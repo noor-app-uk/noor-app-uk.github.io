@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Privacy Policy · Noor</title>
+<meta name="description" content="How the Noor app handles your information. Noor keeps almost everything on your device — no accounts, no tracking, no ads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0E17;
+    --surface:#11161f;
+    --surface-alt:#161c27;
+    --border:#222a38;
+    --border-light:#2a3342;
+    --text:#EAEEF5;
+    --text-secondary:#9aa3b2;
+    --text-dim:#6b7484;
+    --gold:#C5A55A;
+    --gold-soft:#d8bd7e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight:400;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    padding:0 20px 80px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  /* faint eight-point star field / radial glow atmosphere */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(circle at 50% -10%, rgba(197,165,90,0.10), transparent 55%),
+      radial-gradient(circle at 100% 100%, rgba(197,165,90,0.04), transparent 40%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .wrap{max-width:720px;margin:0 auto;position:relative;z-index:1}
+
+  /* ---- Header ---- */
+  header{
+    text-align:center;
+    padding:64px 0 40px;
+  }
+  .mark{
+    width:64px;height:64px;margin:0 auto 22px;
+    display:block;
+  }
+  .brand{
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:clamp(28px,6vw,40px);
+    font-weight:700;
+    letter-spacing:-0.5px;
+    line-height:1.15;
+    margin-bottom:14px;
+  }
+  .updated{
+    color:var(--text-dim);
+    font-size:13px;
+    letter-spacing:0.3px;
+  }
+  .rule{
+    width:48px;height:2px;
+    background:var(--gold);
+    margin:30px auto 0;
+    opacity:0.6;
+  }
+
+  /* ---- Short version highlight card ---- */
+  .tldr{
+    background:linear-gradient(135deg, rgba(197,165,90,0.10), rgba(197,165,90,0.03));
+    border:1px solid rgba(197,165,90,0.35);
+    border-radius:18px;
+    padding:24px 26px;
+    margin:8px 0 44px;
+  }
+  .tldr .label{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--gold);font-weight:700;margin-bottom:10px;
+  }
+  .tldr p{color:var(--text);font-size:15.5px;margin:0}
+
+  /* ---- Sections ---- */
+  section{margin-bottom:38px}
+  h2{
+    font-size:13px;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:16px;
+    padding-bottom:0;
+  }
+  p{color:var(--text-secondary);font-size:15px;margin-bottom:14px}
+  p:last-child{margin-bottom:0}
+  strong{color:var(--text);font-weight:600}
+  a{color:var(--gold-soft);text-decoration:none;border-bottom:1px solid rgba(216,189,126,0.3);transition:border-color .2s,color .2s}
+  a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+  ul{list-style:none;margin:0 0 14px}
+  li{
+    color:var(--text-secondary);
+    font-size:15px;
+    padding:8px 0 8px 26px;
+    position:relative;
+    border-bottom:1px solid var(--border);
+  }
+  li:last-child{border-bottom:none}
+  li::before{
+    content:"";
+    position:absolute;
+    left:4px;top:16px;
+    width:7px;height:7px;
+    background:var(--gold);
+    transform:rotate(45deg);
+    opacity:0.7;
+  }
+
+  /* service entries */
+  .service{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:16px 18px;
+    margin-bottom:10px;
+  }
+  .service .name{color:var(--text);font-weight:600;font-size:15px;margin-bottom:4px}
+  .service p{margin:0;font-size:14px}
+
+  /* ---- Footer ---- */
+  footer{
+    text-align:center;
+    margin-top:64px;
+    padding-top:32px;
+    border-top:1px solid var(--border);
+  }
+  footer .contact{
+    color:var(--text-secondary);
+    font-size:14px;
+    margin-bottom:18px;
+  }
+  footer .tag{
+    color:var(--text-dim);
+    font-size:12px;
+    letter-spacing:0.5px;
+  }
+  footer a{font-weight:600}
+
+  /* staggered entrance */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  header,.tldr,section,footer{animation:fadeUp .6s ease both}
+  .tldr{animation-delay:.05s}
+  section:nth-of-type(1){animation-delay:.1s}
+  section:nth-of-type(2){animation-delay:.15s}
+  section:nth-of-type(3){animation-delay:.2s}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <!-- Noor mark: Rub el Hizb + halo + crescent (mask) + five-point star, matching the app icon -->
+    <svg class="mark" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <radialGradient id="noorHalo" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#C5A55A" stop-opacity="0.18"/>
+          <stop offset="60%" stop-color="#C5A55A" stop-opacity="0.04"/>
+          <stop offset="100%" stop-color="#C5A55A" stop-opacity="0"/>
+        </radialGradient>
+        <mask id="noorCrescent">
+          <rect width="200" height="200" fill="white"/>
+          <circle cx="116" cy="100" r="28" fill="black"/>
+        </mask>
+      </defs>
+      <rect x="46" y="46" width="108" height="108" stroke="#C5A55A" stroke-width="2.4"/>
+      <rect x="46" y="46" width="108" height="108" stroke="#C5A55A" stroke-width="2.4" transform="rotate(45 100 100)"/>
+      <circle cx="100" cy="100" r="52" fill="url(#noorHalo)"/>
+      <circle cx="100" cy="100" r="52" stroke="#C5A55A" stroke-width="0.8" stroke-opacity="0.22"/>
+      <circle cx="100" cy="100" r="34" fill="#C5A55A" mask="url(#noorCrescent)"/>
+      <path d="M124 97 l3.1 6.4 7 1 -5 5 1.2 7 -6.3-3.3 -6.3 3.3 1.2-7 -5-5 7-1 Z" fill="#C5A55A"/>
+    </svg>
+    <div class="brand">Noor</div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: [DATE]</div>
+    <div class="rule"></div>
+  </header>
+
+  <p style="margin-bottom:32px">Noor (&ldquo;Noor&rdquo;, &ldquo;the app&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) is operated by <strong>[OPERATOR]</strong>, registered in England and Wales, with a registered office at [REGISTERED ADDRESS]. You can contact us at <a href="mailto:noor.app.uk@gmail.com">noor.app.uk@gmail.com</a>. This policy explains what information the app handles, where it goes, and what your choices are. We have tried to write it in plain language.</p>
+
+  <div class="tldr">
+    <div class="label">The short version</div>
+    <p>Noor keeps almost everything on your device. We have no user accounts, we do not track you, we show no adverts, and we do not sell your data &mdash; because we do not collect it. The app talks to a small number of third-party services only to fetch prayer times, Quran content, and to process a contribution if you choose to make one.</p>
+  </div>
+
+  <section>
+    <h2>Information stored only on your device</h2>
+    <p>The following is stored locally on your phone, in the app&rsquo;s own storage, and is never sent to any server we control:</p>
+    <ul>
+      <li>Your prayer check-offs and prayer history</li>
+      <li>Your Quran reading progress, bookmarks, and favourites</li>
+      <li>Your Hifz (memorisation) tracking</li>
+      <li>Your XP, streaks, and achievements</li>
+      <li>Your settings: location, calculation method, daily goal, notification preferences, language, and display preferences</li>
+      <li>Any Quran surahs you download for offline reading</li>
+      <li>Onboarding and tutorial progress</li>
+    </ul>
+    <p>If you uninstall the app, this information is deleted with it. We cannot recover it for you, because we never had a copy.</p>
+  </section>
+
+  <section>
+    <h2>Third-party services the app uses</h2>
+    <p>To function, Noor sends requests to the following services. We do not control them, and your use of them is governed by their own privacy policies.</p>
+
+    <div class="service">
+      <div class="name">Aladhan API</div>
+      <p>When the app calculates prayer times, the Hijri date, or the Qibla direction, it sends your approximate location (latitude and longitude) to Aladhan. We do not store these requests. <a href="https://aladhan.com">aladhan.com</a></p>
+    </div>
+    <div class="service">
+      <div class="name">AlQuran Cloud &amp; the Islamic Network CDN</div>
+      <p>When you read or listen to the Quran, the app fetches verse text, translations, and recitation audio. These requests contain the surah and verse you are viewing, not personal information.</p>
+    </div>
+    <div class="service">
+      <div class="name">OpenStreetMap Nominatim</div>
+      <p>When the app turns your coordinates into a readable place name, it sends those coordinates to OpenStreetMap. <a href="https://openstreetmap.org/copyright">openstreetmap.org</a></p>
+    </div>
+    <div class="service">
+      <div class="name">Stripe</div>
+      <p>If you make a contribution, you are taken to a payment page hosted by Stripe. We never see or store your card details. Stripe processes payment under its own policy. <a href="https://stripe.com/privacy">stripe.com/privacy</a></p>
+    </div>
+    <div class="service">
+      <div class="name">Google Fonts &amp; content delivery networks</div>
+      <p>The app loads display fonts and small software libraries from public CDNs such as Google Fonts and unpkg. As with any web request, these servers receive your device&rsquo;s IP address. No personal information is sent.</p>
+    </div>
+    <div class="service">
+      <div class="name">Google Play Services</div>
+      <p>Because Noor is distributed through the Google Play Store, Google may collect basic device information and crash diagnostics under its own policy. We do not control this and do not receive personally identifying data from it.</p>
+    </div>
+    <p>Ordinary internet requests reveal your device&rsquo;s IP address to the service being contacted. This is how the internet works and is not something Noor uses to identify or track you.</p>
+  </section>
+
+  <section>
+    <h2>Location</h2>
+    <p>Noor uses your device location to calculate prayer times and the Qibla direction. You can allow the app to use your device location, or set your location manually by entering or selecting a place.</p>
+    <p>Your location is used only to compute prayer times and the Qibla bearing, and is sent to the Aladhan and OpenStreetMap services above for those purposes. It is not logged by us, not stored on any server we control, and not shared for advertising or any other purpose.</p>
+  </section>
+
+  <section>
+    <h2>Notifications</h2>
+    <p>If you turn on prayer notifications, Noor schedules them locally on your device using your phone&rsquo;s own notification system. These reminders are generated on your phone &mdash; they are not sent from a server, and we operate no push-notification system.</p>
+  </section>
+
+  <section>
+    <h2>No analytics, tracking, or advertising</h2>
+    <p>Noor contains no analytics, no third-party tracking, no advertising, and no cookies of our own. We do not know how many people use the app, which features they use, or how long they spend in it. This is a deliberate choice. It also means we cannot show usage statistics, because that data does not exist on our side.</p>
+  </section>
+
+  <section>
+    <h2>Contributions</h2>
+    <p>Contributions are entirely optional, and all features remain free whether or not you contribute. Contributions are processed by Stripe. After Stripe&rsquo;s card processing fees, a portion supports the ongoing development of the app and a portion is set aside and donated periodically to registered UK charities, as described inside the app. We do not receive or store your card details at any point.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>Noor is not directed at children under 13, and we do not knowingly collect personal information from children under 13. The app is intended for a general, mainly adult audience. Because Noor does not collect personal information on any server we control, there is no personal data of any user &mdash; child or adult &mdash; held by us. If you believe a child has provided us with personal information and would like it addressed, please contact us.</p>
+  </section>
+
+  <section>
+    <h2>Your rights</h2>
+    <p>Because we do not hold your personal information on any server we control, most data-protection rights such as access, correction, and erasure are satisfied automatically: your information is on your own device and under your control. You can clear it at any time by clearing the app&rsquo;s data or uninstalling the app.</p>
+    <p>If you have made a contribution, any limited information held by Stripe (such as the transaction amount and an email you may have provided) is held by Stripe under its own policy, and you can exercise your rights in relation to that data by contacting Stripe.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If we change this policy, we will update the &ldquo;Last updated&rdquo; date at the top. Where changes are significant, we will aim to make this clear within the app.</p>
+  </section>
+
+  <footer>
+    <div class="contact">Questions? Email <a href="mailto:noor.app.uk@gmail.com">noor.app.uk@gmail.com</a></div>
+    <div class="tag">Noor &middot; Free forever, no ads</div>
+  </footer>
+
+</div>
+</body>
+</html>
